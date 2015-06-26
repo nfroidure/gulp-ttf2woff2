@@ -30,10 +30,10 @@
     "cover": "./node_modules/istanbul/lib/cli.js cover --report html ./node_modules/mocha/bin/_mocha -- tests/*.mocha.js -R spec -t 5000"
   },
   "dependencies": {
-    "ttf2woff2": "1.1.1",
-    "gulp-util": "3.0.6",
-    "bufferstreams": "1.0.2",
-    "readable-stream": "2.0.1"
+    "ttf2woff2": "^1.1.1",
+    "gulp-util": "^3.0.6",
+    "bufferstreams": "^1.0.2",
+    "readable-stream": "^2.0.1"
   },
   "keywords": [
     "gulpplugin",
@@ -45,11 +45,11 @@
     "converter"
   ],
   "devDependencies": {
-    "coveralls": "~2.11.2",
-    "gulp": "~3.9.0",
-    "istanbul": "~0.3.16",
-    "mocha": "~2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
+    "coveralls": "^2.11.2",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.3.16",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "^0.0.2",
     "streamtest": "^1.2.1"
   }
 }
