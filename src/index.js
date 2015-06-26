@@ -20,8 +20,8 @@ function ttf2woff2Transform(opt) {
       try {
         buf = ttf2woff2(buf);
         cb(null, buf);
-      } catch(err) {
-        cb(new gutil.PluginError(PLUGIN_NAME, err, {showStack: true}));
+      } catch(err2) {
+        cb(new gutil.PluginError(PLUGIN_NAME, err2, {showStack: true}));
       }
 
   };
@@ -88,7 +88,7 @@ function ttf2woff2Gulp(options) {
 
   return stream;
 
-};
+}
 
 // Export the file level transform function for other plugins usage
 ttf2woff2Gulp.fileTransform = ttf2woff2Transform;
