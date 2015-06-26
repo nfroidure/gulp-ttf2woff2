@@ -6,7 +6,7 @@ var gutil = require('gulp-util');
 var BufferStreams = require('bufferstreams');
 var ttf2woff2 = require('ttf2woff2');
 
-const PLUGIN_NAME = 'gulp-ttf2woff2';
+var PLUGIN_NAME = 'gulp-ttf2woff2';
 
 // File level transform function
 function ttf2woff2Transform(opt) {
