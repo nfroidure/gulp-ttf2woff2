@@ -1,3 +1,5 @@
+'use strict';
+
 var path = require('path');
 var Stream = require('readable-stream');
 var gutil = require('gulp-util');
@@ -95,4 +97,3 @@ ttf2woff2Gulp.fileTransform = ttf2woff2Transform;
 
 // Export the plugin main function
 module.exports = ttf2woff2Gulp;
-
