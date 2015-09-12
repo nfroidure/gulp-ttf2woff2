@@ -22,7 +22,7 @@
   ],
   "main": "src/index.js",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "scripts": {
     "test": "mocha tests/*.mocha.js",
@@ -33,7 +33,7 @@
     "cli": "env NPM_RUN_CLI=1"
   },
   "dependencies": {
-    "ttf2woff2": "^1.2.3",
+    "ttf2woff2": "^2.0.0",
     "gulp-util": "^3.0.6",
     "bufferstreams": "^1.1.0",
     "readable-stream": "^2.0.2"
