@@ -26,14 +26,17 @@
   },
   "scripts": {
     "test": "mocha tests/*.mocha.js",
-    "coveralls": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- tests/*.mocha.js -R spec -t 5000 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "cover": "./node_modules/istanbul/lib/cli.js cover --report html ./node_modules/mocha/bin/_mocha -- tests/*.mocha.js -R spec -t 5000"
+    "coveralls": "istanbul cover _mocha --report lcovonly -- tests/*.mocha.js -R spec -t 5000 && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "cover": "istanbul cover --report html _mocha -- tests/*.mocha.js -R spec -t 5000",
+    "lint": "eslint src/*.js tests/*.js",
+    "preversion": "npm run lint && npm test",
+    "cli": "env NPM_RUN_CLI=1"
   },
   "dependencies": {
-    "ttf2woff2": "^1.1.1",
+    "ttf2woff2": "^1.2.3",
     "gulp-util": "^3.0.6",
-    "bufferstreams": "^1.0.2",
-    "readable-stream": "^2.0.1"
+    "bufferstreams": "^1.1.0",
+    "readable-stream": "^2.0.2"
   },
   "keywords": [
     "gulpplugin",
@@ -45,10 +48,12 @@
     "converter"
   ],
   "devDependencies": {
-    "coveralls": "^2.11.2",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.4.1",
+    "eslint-config-simplifield": "^1.1.0",
     "gulp": "^3.9.0",
-    "istanbul": "^0.3.16",
-    "mocha": "^2.2.5",
+    "istanbul": "^0.3.19",
+    "mocha": "^2.3.2",
     "mocha-lcov-reporter": "^0.0.2",
     "streamtest": "^1.2.1"
   }

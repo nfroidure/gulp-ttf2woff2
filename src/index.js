@@ -9,36 +9,38 @@ var ttf2woff2 = require('ttf2woff2');
 var PLUGIN_NAME = 'gulp-ttf2woff2';
 
 // File level transform function
-function ttf2woff2Transform(opt) {
+function ttf2woff2Transform() {
   // Return a callback function handling the buffered content
-  return function(err, buf, cb) {
+  return function ttf2woff2TransformCb(err, buf, cb) {
 
     // Handle any error
     if(err) {
-      cb(new gutil.PluginError(PLUGIN_NAME, err, {showStack: true}));
+      return cb(new gutil.PluginError(PLUGIN_NAME, err, { showStack: true }));
     }
 
     // Use the buffered content
-      try {
-        buf = ttf2woff2(buf);
-        cb(null, buf);
-      } catch(err2) {
-        cb(new gutil.PluginError(PLUGIN_NAME, err2, {showStack: true}));
-      }
+    try {
+      buf = ttf2woff2(buf);
+      return cb(null, buf);
+    } catch(err2) {
+      return cb(new gutil.PluginError(PLUGIN_NAME, err2, { showStack: true }));
+    }
 
   };
 }
 
 // Plugin function
 function ttf2woff2Gulp(options) {
+  var stream = new Stream.Transform({ objectMode: true });
 
   options = options || {};
   options.ignoreExt = options.ignoreExt || false;
   options.clone = options.clone || false;
 
-  var stream = new Stream.Transform({objectMode: true});
+  stream._transform = function ttf2woff2GulpTransform(file, unused, done) {
+    var cntStream;
+    var newFile;
 
-  stream._transform = function(file, unused, done) {
      // When null just pass through
     if(file.isNull()) {
       stream.push(file); done();
@@ -57,9 +59,9 @@ function ttf2woff2Gulp(options) {
       if(file.isBuffer()) {
         stream.push(file.clone());
       } else {
-        var cntStream = file.contents;
+        cntStream = file.contents;
         file.contents = null;
-        var newFile = file.clone();
+        newFile = file.clone();
         file.contents = cntStream.pipe(new Stream.PassThrough());
         newFile.contents = cntStream.pipe(new Stream.PassThrough());
         stream.push(newFile);
@@ -74,7 +76,7 @@ function ttf2woff2Gulp(options) {
         file.contents = ttf2woff2(file.contents);
       } catch(err) {
         stream.emit('error', new gutil.PluginError(PLUGIN_NAME, err, {
-          showStack: true
+          showStack: true,
         }));
       }
 
