@@ -33,10 +33,10 @@
     "cli": "env NPM_RUN_CLI=1"
   },
   "dependencies": {
-    "ttf2woff2": "^2.0.0",
-    "gulp-util": "^3.0.6",
+    "ttf2woff2": "^2.0.3",
+    "gulp-util": "^3.0.7",
     "bufferstreams": "^1.1.0",
-    "readable-stream": "^2.0.2"
+    "readable-stream": "^2.0.4"
   },
   "keywords": [
     "gulpplugin",
@@ -49,12 +49,12 @@
   ],
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "eslint": "^1.4.1",
+    "eslint": "^1.10.0",
     "eslint-config-simplifield": "^1.1.0",
     "gulp": "^3.9.0",
-    "istanbul": "^0.3.19",
-    "mocha": "^2.3.2",
-    "mocha-lcov-reporter": "^0.0.2",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
     "streamtest": "^1.2.1"
   }
 }
