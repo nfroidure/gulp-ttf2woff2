@@ -26,22 +26,22 @@ describe('gulp-ttf2woff2 conversion', function() {
 
         it('should let null files pass through', function(done) {
 
-            StreamTest[version].fromObjects([new gutil.File({
-              path: 'bibabelula.foo',
-              contents: null,
-            })])
-            .pipe(ttf2woff2())
-            .pipe(StreamTest[version].toObjects(function(err, objs) {
-              if(err) {
-                return done(err);
-              }
-              assert.equal(objs.length, 1);
-              assert.equal(objs[0].path, 'bibabelula.foo');
-              assert.equal(objs[0].contents, null);
-              done();
-            }));
+          StreamTest[version].fromObjects([new gutil.File({
+            path: 'bibabelula.foo',
+            contents: null,
+          })])
+          .pipe(ttf2woff2())
+          .pipe(StreamTest[version].toObjects(function(err, objs) {
+            if(err) {
+              return done(err);
+            }
+            assert.equal(objs.length, 1);
+            assert.equal(objs[0].path, 'bibabelula.foo');
+            assert.equal(objs[0].contents, null);
+            done();
+          }));
 
-          });
+        });
 
       });
 
