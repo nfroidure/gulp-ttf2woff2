@@ -32,7 +32,7 @@
     "plugin-error": "^1.0.1",
     "readable-stream": "^2.0.4",
     "replace-ext": "^1.0.0",
-    "ttf2woff2": "^2.0.3",
+    "ttf2woff2": "^3.0.0",
     "vinyl": "^2.2.0"
   },
   "keywords": [
@@ -48,7 +48,7 @@
     "coveralls": "^2.11.4",
     "eslint": "^1.10.1",
     "eslint-config-simplifield": "^1.1.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0",
