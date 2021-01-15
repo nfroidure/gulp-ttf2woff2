@@ -1,7 +1,7 @@
 # gulp-ttf2woff2
 > Create a WOFF2 font from a TTF font with [Gulp](http://gulpjs.com/).
 
-[![NPM version](https://badge.fury.io/js/gulp-ttf2woff2.svg)](https://npmjs.org/package/gulp-ttf2woff2) [![Build status](https://secure.travis-ci.org/nfroidure/gulp-ttf2woff2.svg)](https://travis-ci.org/nfroidure/gulp-ttf2woff2) [![Dependency Status](https://david-dm.org/nfroidure/gulp-ttf2woff2.svg)](https://david-dm.org/nfroidure/gulp-ttf2woff2) [![devDependency Status](https://david-dm.org/nfroidure/gulp-ttf2woff2/dev-status.svg)](https://david-dm.org/nfroidure/gulp-ttf2woff2#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/nfroidure/gulp-ttf2woff2/badge.svg?branch=master)](https://coveralls.io/r/nfroidure/gulp-ttf2woff2?branch=master) [![Code Climate](https://codeclimate.com/github/nfroidure/gulp-ttf2woff2.svg)](https://codeclimate.com/github/nfroidure/gulp-ttf2woff2)
+[![NPM version](https://badge.fury.io/js/gulp-ttf2woff2.svg)](https://npmjs.org/package/gulp-ttf2woff2) [![Run test](https://github.com/nfroidure/gulp-ttf2woff2/workflows/Run%20tests/badge.svg)](https://github.com/nfroidure/gulp-ttf2woff2/actions) [![Dependency Status](https://david-dm.org/nfroidure/gulp-ttf2woff2.svg)](https://david-dm.org/nfroidure/gulp-ttf2woff2) [![devDependency Status](https://david-dm.org/nfroidure/gulp-ttf2woff2/dev-status.svg)](https://david-dm.org/nfroidure/gulp-ttf2woff2#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/nfroidure/gulp-ttf2woff2/badge.svg?branch=master)](https://coveralls.io/r/nfroidure/gulp-ttf2woff2?branch=master) [![Code Climate](https://codeclimate.com/github/nfroidure/gulp-ttf2woff2.svg)](https://codeclimate.com/github/nfroidure/gulp-ttf2woff2)
 
 ## Usage
 
