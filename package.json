@@ -51,6 +51,6 @@
     "istanbul": "^0.4.0",
     "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0",
-    "streamtest": "^1.2.1"
+    "streamtest": "^2.0.0"
   }
 }
