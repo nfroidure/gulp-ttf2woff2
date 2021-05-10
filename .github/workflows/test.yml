@@ -13,3 +13,6 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm test
+      - uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

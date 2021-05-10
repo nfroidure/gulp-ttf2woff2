@@ -20,9 +20,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "mocha tests/*.mocha.js",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- tests/*.mocha.js -R spec -t 5000 && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "cover": "istanbul cover --report html _mocha -- tests/*.mocha.js -R spec -t 5000",
+    "test": "nyc --reporter=lcov mocha tests/*.mocha.js",
     "lint": "eslint src/*.js tests/*.js",
     "preversion": "npm run lint && npm test",
     "cli": "env NPM_RUN_CLI=1"
@@ -45,12 +43,10 @@
     "converter"
   ],
   "devDependencies": {
-    "coveralls": "^2.11.4",
     "eslint": "^7.18.0",
     "gulp": "^4.0.2",
-    "istanbul": "^0.4.0",
     "mocha": "^8.2.1",
-    "mocha-lcov-reporter": "^1.0.0",
+    "nyc": "15.1.0",
     "streamtest": "^2.0.0"
   }
 }
